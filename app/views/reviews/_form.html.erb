@@ -1,0 +1,10 @@
+<!-- app/views/reviews/_form.html.erb -->
+
+<%= simple_form_for([ restaurant, review ],
+                    data: {
+                      insert_in_list_target: "form",
+                      action: "submit->insert-in-list#send"
+                    }) do |f| %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit %>
+<% end %>
